@@ -1,0 +1,17 @@
+{
+	"short_name": "short name",
+	"name": "sample name",
+	"manifest_version": 2,
+	"description": "説明記入欄",
+	"version": "0.0.1",
+	"page_action": {
+		"default_popup": "index.html",
+		"default_title": "default title"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.google.com/*"],
+			"js": ["js/content.js"]
+		}
+	]
+}
