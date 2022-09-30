@@ -131,6 +131,7 @@ dist
 
 # Generate Files
 dist/
+*.zip
 
 # Mac
 .DS_Store
