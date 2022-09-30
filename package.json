@@ -1,6 +1,6 @@
 {
-	"name": "chrome-extention-discussions",
-	"version": "1.0.0",
+	"name": "github_discussions_renamer",
+	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
