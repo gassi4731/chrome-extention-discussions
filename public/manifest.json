@@ -1,6 +1,6 @@
 {
 	"name": "Github Discussions Renamer",
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"description": "Github Discussionsのユーザー名の表示を変更してくれる拡張です。",
 	"version": "0.0.1",
 	"icons": {
@@ -8,11 +8,14 @@
 		"48": "image/icon_48.png",
 		"128": "image/icon_128.png"
 	},
-	"permissions": ["storage", "https://github.com/*"],
-	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"permissions": ["storage", "scripting"],
+	"host_permissions": ["https://github.com/*"],
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self'"
+	},
 	"options_page": "options.html",
 	"background": {
-		"scripts": ["js/background.js"],
-		"persistent": true
+		"service_worker": "js/background.js",
+		"type": "module"
 	}
 }
